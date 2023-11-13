@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hwuv37O3zMsewwLHWwAte2mnZY4RMt/ltQFvVOUFAVg9lntV1259pnEnS9JnVY7aAHqZoGJglduHUGJpRCOHnw==",
+  "success": true,
+  "projectFilePath": "D:\\Project Demo\\AAAMyOwn\\rawImage\\rawImage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sofar\\.nuget\\packages\\magick.net-q16-anycpu\\13.2.0\\magick.net-q16-anycpu.13.2.0.nupkg.sha512",
+    "C:\\Users\\sofar\\.nuget\\packages\\magick.net.core\\13.2.0\\magick.net.core.13.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

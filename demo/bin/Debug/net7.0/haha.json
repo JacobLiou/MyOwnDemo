@@ -1,0 +1,5 @@
+{
+  "MyProperty": 1,
+  "MyProperty1": "",
+  "Nest1": { "now": null, "Nest2s": [{ "MyBool": true }] }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GXgTjA/4yY16TIPdGCq8DzEu9HgoArcSX89iFqxKRpo=",
+  "Source": "ratelimiter",
+  "BasePath": "_content/ratelimiter",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

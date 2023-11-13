@@ -1,0 +1,5 @@
+D:\Project Demo\AAAMyOwn\InkCanvasDemo\obj\Debug\net7.0-windows\InkCanvasDemo.csproj.AssemblyReference.cache
+D:\Project Demo\AAAMyOwn\InkCanvasDemo\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Project Demo\AAAMyOwn\InkCanvasDemo\obj\Debug\net7.0-windows\App.g.cs
+D:\Project Demo\AAAMyOwn\InkCanvasDemo\obj\Debug\net7.0-windows\InkCanvasDemo_MarkupCompile.cache
+D:\Project Demo\AAAMyOwn\InkCanvasDemo\obj\Debug\net7.0-windows\InkCanvasDemo_MarkupCompile.lref
