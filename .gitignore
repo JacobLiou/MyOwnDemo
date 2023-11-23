@@ -12,3 +12,12 @@ Desktop.ini
 
 /bin
 /obj
+/AvaloniaDemo/obj
+/AvaloniaDemo/bin/Debug/net6.0
+/AvaloniaDemo/.vs
+
+
+*/bin
+*/obj
+
+*.obj

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.7.1.js"></script>
+    <title>jQuery Demo</title>
+</head>
+<body>
+    <h1>小标题</h5>
+    <h2>小标题</h5>
+    <h3>小标题</h5>
+    <h4>小标题</h5>
+    <h5>小标题</h5>
+    <h6>小标题</h5>
+    <p id="p1"> safjlsfkjdslfldsafdsjflsdfjlsdkfjsaldfdsafds</p>
+    <button id="btnClick">隐藏</button>
+    <script>
+        $(document).ready(function() {
+            //开始写 jQuery 代码
+            // $("h5").hide();
+
+            btnClick.addEventListener("click", function(){
+                if(btnClick.innerHTML == "隐藏")
+                {
+                    $("h5").hide();
+                    btnClick.innerHTML = "显示";
+                }
+                else
+                {
+                    $("h5").show();
+                    btnClick.innerHTML = "隐藏";
+                }  
+            });
+
+            $("#p1").hover(
+                function(){
+                    alert("你进入了 p1!");
+                },
+                function(){
+                    alert("拜拜! 现在你离开了 p1!");
+                }
+            );
+        });
+    </script>
+</body>
+</html>

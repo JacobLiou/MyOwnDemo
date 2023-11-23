@@ -1,0 +1,29 @@
+@page "/ppt"
+@inject IJSRuntime JS;
+
+<div class="iframe-container">
+    <BusyIndicator IsLoading="isLoading" />
+    <iframe src="https://onedrive.com/enbed?xxxxxxxx"
+        frameborder="0
+        scrolling="no" />
+</div>
+
+@code {
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await JS.InvokeVoidAsync("ShowPPTDialog");
+        isLoading = false;
+        await base.OnInitializedAsync();
+    }
+}
+
+@* @script {
+    let timerInterval;
+    window.ShowPPTDialog = () => {
+        Swal.fire({
+            <title></title>
+        });
+    }
+} *@
