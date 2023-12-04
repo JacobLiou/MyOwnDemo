@@ -39,3 +39,45 @@ await pipeline.ExecuteAsync(async url =>
     var httpClient = new HttpClient();
     await httpClient.GetAsync("www.google.com", cancellactionToken)
 }, cancellactionToken);
+
+
+var policy = Policy.Handle<HttpIOException>()
+    .OrResult<HttpResponseMessage>(result => result.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+    .WaitAndRetry(3, _ => TimeSpan.FromSeconds(1));
+
+
+ISyncPolicy policy1 = Policy.RateLimit(numberOfExecutions:100, perTimeSpan:TimeSpan.FromMinutes(1));
+policy1.Execute(() => {
+
+});
+
+
+var policy2 = Policy.Bulkhead(
+    maxParallelization: 100,
+    maxQueuingActions:50
+);
+
+
+ResiliencePipeline pipeline1 = new ResiliencePipelineBuilder()
+.AddTimeout(TimeSpan.FromSeconds(10))
+.Build();
+
+var policy3 = Policy.Handle<HttpIOException>()
+.CircuitBreaker(
+    exceptionsAllowedBeforeBreaking: 2,
+    durationOfBreak: TimeSpan.FromSeconds(2)
+);
+
+
+Context context = new Context();
+context["key1"] = "Value1";
+
+
+string val1 = (string)context["key1"];
+
+
+//V8 创建上下文
+ResilienceContext context1 = ResilienceContextPool.Shared.Get();
+
+ResiliencePropertyKey<string> key1 = new();
+context1.Properties.Set(key1, "Value1");
