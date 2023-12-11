@@ -21,3 +21,6 @@ Desktop.ini
 */obj
 
 *.obj
+
+*/.vs
+*/.vscode

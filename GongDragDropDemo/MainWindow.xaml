@@ -1,0 +1,33 @@
+﻿<Window x:Class="GongDragDropDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dd="urn:gong-wpf-dragdrop"
+        xmlns:local="clr-namespace:GongDragDropDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0"
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DragHandler="{Binding}">
+            <ListBoxItem Content="1" />
+            <ListBoxItem Content="2" />
+            <ListBoxItem Content="3" />
+        </ListBox>
+
+        <ListBox Grid.Column="1"
+         dd:DragDrop.IsDragSource="True"
+         dd:DragDrop.IsDropTarget="True"
+         dd:DragDrop.DragHandler="{Binding}">   
+            <ListBoxItem Content="1" />
+            <ListBoxItem Content="2" />
+            <ListBoxItem Content="3" />
+        </ListBox>
+    </Grid>
+</Window>
