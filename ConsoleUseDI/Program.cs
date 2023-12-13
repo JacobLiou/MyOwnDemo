@@ -5,7 +5,8 @@ using Microsoft.Extensions.Logging;
 Console.WriteLine("Hello, World!");
 
 ServiceCollection serviceCollection = new ServiceCollection();
-serviceCollection.AddLogging();
+serviceCollection.AddLogging((loggingBuilder) => loggingBuilder.
+    SetMinimumLevel(LogLevel.Trace).AddConsole());
 serviceCollection.AddKeyedScoped<IHello, GoodHello>("IGoodHello");
 serviceCollection.AddKeyedScoped<IHello, BadHello>("IBadHello");
 
@@ -24,7 +25,7 @@ internal class GoodHello(ILogger<GoodHello> logger) : IHello
     public string SayHello()
     {
         Logger.LogInformation($"Hello");
-        Console.WriteLine("Good Hello");
+        //Console.WriteLine("Good Hello");
         return "Good Hello";
     }
 }
